@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="karpat.guvencan.contactapp.ui.main.SharedViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.home.HomeFragment">
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/lineId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="48dp"
+            android:layout_marginTop="64dp"
+            android:text="@{viewModel.selectedItem.id}"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@string/mock3" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/lineName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="48dp"
+            android:layout_marginTop="16dp"
+            android:text="@{viewModel.selectedItem.name + `:  ` + viewModel.selectedItem.surname}"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lineId"
+            tools:text="@string/mock1" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/lineCompany"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@{viewModel.selectedItem.company_name + `:  ` + viewModel.selectedItem.department}"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/lineName"
+            app:layout_constraintTop_toBottomOf="@+id/lineName"
+            tools:text="@string/mock4" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/lineEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@{viewModel.selectedItem.email}"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/lineCompany"
+            app:layout_constraintTop_toBottomOf="@+id/lineCompany"
+            tools:text="@string/mock5" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floatingDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:clickable="true"
+            android:src="@drawable/ic_delete"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/floatingEdit" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floatingEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:clickable="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:src="@drawable/ic_edit" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

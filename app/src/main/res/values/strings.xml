@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">ContactApp</string>
+    <string name="home">Home</string>
+    <string name="detail">Detail</string>
+    <string name="mock1">Güvencan</string>
+    <string name="mock2">Karpat</string>
+    <string name="mock3">34</string>
+    <string name="mock4">Engineer</string>
+    <string name="mock6">X company</string>
+    <string name="mock5">karpatguvencan@gmail.com</string>
+    <string name="edit">Edit</string>
+    <string name="title">Error</string>
+    <string name="save">Save</string>
+    <string name="email">Email</string>
+    <string name="name">Name</string>
+    <string name="surname">Surname</string>
+    <string name="company">Company</string>
+    <string name="department">Department</string>
+    <string name="hint">Enter name or surname</string>
+</resources>
